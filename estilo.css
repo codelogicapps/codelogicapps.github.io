@@ -21,6 +21,10 @@
   --tinta: #1C2026;
   --tinta-suave: #4E5661;
   --borde: #D5DBE2;
+  /* Marca CodeLogic Apps (logo A2) */
+  --marca-azul: #0F2238;
+  --marca-azul-2: #1A3150;
+  --marca-verde: #14B37D;
   --ancho: 1080px;
   --titulo: "Overpass", "Arial Narrow", system-ui, sans-serif;
   --texto: "Atkinson", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -53,7 +57,8 @@ p { margin: 0 0 1em; }
 .barra { background: var(--asfalto); color: #fff; }
 .barra .contenedor { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
 .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 800 1.15rem/1 var(--titulo); }
-.marca img { width: 36px; height: 36px; }
+.marca img { width: auto; height: 32px; display: block; }
+@media (max-width: 420px) { .marca img { height: 26px; } }
 .barra nav { display: flex; gap: 22px; font: 700 0.98rem/1 var(--titulo); }
 .barra nav a { text-decoration: none; padding: 6px 0; border-bottom: 3px solid transparent; }
 .barra nav a:hover, .barra nav a[aria-current="page"] { border-bottom-color: var(--linea); }
@@ -204,3 +209,6 @@ p { margin: 0 0 1em; }
   .letrero b { font-size: 2rem; }
   .tabla th, .tabla td { padding: 12px 10px; }
 }
+
+/* ---------- Página de la marca: usa los colores del logo */
+.pagina-marca { --asfalto: var(--marca-azul); --asfalto-2: var(--marca-azul-2); --linea: var(--marca-verde); }
